@@ -1,12 +1,12 @@
-package services;
+package main.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import dao.IEmpleadoDAO;
-import dto.Empleado;
+import main.dao.IEmpleadoDAO;
+import main.dto.Empleado;
 
 @Service
 public class EmpleadoServiceImp implements IntEmpleadoService{

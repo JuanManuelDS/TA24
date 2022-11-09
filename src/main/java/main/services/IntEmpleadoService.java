@@ -1,6 +1,6 @@
-package services;
+package main.services;
 
-import dto.Empleado;
+import main.dto.Empleado;
 import java.util.List;
 
 //Estos son los métodos que se podrán realizar sobre la tabla empleados
