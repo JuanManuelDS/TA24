@@ -12,7 +12,7 @@ public interface IntEmpleadoService {
 	
 	public Empleado buscarEmpleado(Long id);
 	
-	public List<Empleado> listarEmpleadosPorNombre(String nombre);
+	public List<Empleado> listarEmpleadosPorTrabajo(String trabajo);
 	
 	public Empleado actualizarEmpleado(Empleado empleado);
 	

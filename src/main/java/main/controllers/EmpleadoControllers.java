@@ -27,9 +27,9 @@ public class EmpleadoControllers {
 		return empleadoService.listarEmpleados();
 	}
 	
-	@GetMapping("/empleados/nombre/{nombre}")
-	public List<Empleado> listarEmpleadosPorNombre(@PathVariable(name="nombre") String nombre){
-		return empleadoService.listarEmpleadosPorNombre(nombre);
+	@GetMapping("/empleados/nombre/{trabajo}")
+	public List<Empleado> listarEmpleadosPorNombre(@PathVariable(name="trabajo") String trabajo){
+		return empleadoService.listarEmpleadosPorTrabajo(trabajo);
 	}
 	
 	@PostMapping("/empleados")
