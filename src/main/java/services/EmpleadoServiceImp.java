@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import dao.IEmpleadoDAO;
 import dto.Empleado;
 
+@Service
 public class EmpleadoServiceImp implements IntEmpleadoService{
 	//Esto nos permite utilizar los métodos de la interface IEmpleadoDAO. Como si la instanciaramos
 	@Autowired

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +30,11 @@ public class EmpleadoControllers {
 	@GetMapping("/empleados/nombre/{nombre}")
 	public List<Empleado> listarEmpleadosPorNombre(@PathVariable(name="nombre") String nombre){
 		return empleadoService.listarEmpleadosPorNombre(nombre);
+	}
+	
+	@PostMapping("/empleados")
+	public Empleado guardarEmpleado(@RequestBody Empleado empleado) {
+		return empleadoService.guardarEmpleado(empleado);
 	}
 	
 	@GetMapping("/empleados/{id}")
