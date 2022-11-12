@@ -48,19 +48,14 @@ public class EmpleadoControllers {
 	
 	@PutMapping("/empleados/{id}")
 	public Empleado actualizarEmpleado(@PathVariable(name="id")Long id, @RequestBody Empleado empleado) {
-		Empleado empleadoAModificar = new Empleado();
-		Empleado empleadoModificado = new Empleado();
 		
-		empleadoAModificar = empleadoService.buscarEmpleado(id);
+		Empleado empleadoSeleccionado = empleadoService.buscarEmpleado(id);
 		
-		empleadoAModificar.setNombre(empleadoModificado.getNombre());
-		empleadoAModificar.setTrabajo(empleadoModificado.getTrabajo());
-		empleadoAModificar.setSalario(empleadoModificado.getSalario());
+		empleadoSeleccionado.setNombre(empleado.getNombre());
+		empleadoSeleccionado.setTrabajo(empleado.getTrabajo());
+		empleadoSeleccionado.setSalario(empleado.getSalario());
 		
-		empleadoModificado = empleadoService.actualizarEmpleado(empleadoAModificar);
-		System.out.println("El cliente actualizado es: " + empleadoModificado);
-		
-		return empleadoModificado;
+		return empleadoService.actualizarEmpleado(empleadoSeleccionado);
 	}
 	
 	@DeleteMapping ("/empleados/{id}")
